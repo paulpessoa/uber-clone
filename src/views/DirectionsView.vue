@@ -18,7 +18,20 @@
                 <div class="w-full h-5"></div>
 
                 <div class="mb-2 mt-5">
-                    autoocmplete
+                    <AutoCompleteInput 
+                    theId="firstInput"
+                    v-model:input="pickup"
+                    placeholder="Enter pick-up location"
+                    @isActive="isPickuActive = true"
+                    />
+                </div>
+                <div class="mb-3">
+                    <AutoCompleteInput 
+                    theId="secondInput"
+                    v-model:input="destination"
+                    placeholder="Where to?"
+                    @isActive="isPickuActive = false"
+                    />
                 </div>
             </div>
 
@@ -26,19 +39,18 @@
     </div>
 </template>
   
-
 <script setup>
     import { ref } from 'vue'
+    import AutoCompleteInput from '@/components/AutoCompleteInput.vue'
     import ArrowIcon from 'vue-material-design-icons/ArrowLeft.vue'
- 
+    
     let isPickuActive = ref(true)
-
+    let pickup = ref('')
+    let destination = ref('')
 </script>
   
-  
-  
 <style lang="scss" scoped>
-  #Directions {
+    #Directions {
     .bg-custom-color {
       background-color: rgb(237, 237, 237);
     }
@@ -49,7 +61,6 @@
         background-color: black;
         border-radius: 100%;
     }
-    
     .circle-gray {
         margin: 0 auto;
         width: 9px;
@@ -63,14 +74,12 @@
         height: 9px;
         background-color: black;
     }
-    
     .square-gray {
         margin: 0 auto;
         width: 9px;
         height: 9px;
         background-color: rgb(191, 191, 191);
     }
-    
     .line {
         margin: 0 auto;
         width: 2px;
