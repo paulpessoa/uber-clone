@@ -34,7 +34,16 @@
                     />
                 </div>
             </div>
+        </div>
 
+        <div class="flex items-center custom-border-bottom">
+            <div class="bg-gray-400 mx-5 my-3.5 p-1.5 rounded-full">
+                <MapMarkerIcon :size="30" fillColor="#f5f5f5"/>
+            </div>
+            <div>
+                <div class="text-lg text-gray-600">London, UK</div>
+                <div class="text-lg text-gray-400">UK</div>
+            </div>
         </div>
     </div>
 </template>
@@ -43,6 +52,7 @@
     import { ref } from 'vue'
     import AutoCompleteInput from '@/components/AutoCompleteInput.vue'
     import ArrowIcon from 'vue-material-design-icons/ArrowLeft.vue'
+    import MapMarkerIcon from 'vue-material-design-icons/MapMarker.vue'
     
     let isPickuActive = ref(true)
     let pickup = ref('')
@@ -85,6 +95,10 @@
         width: 2px;
         height: 45px;
         background-color: rgb(191, 191, 191);
+    }
+
+    .custom-border-bottom{
+        border-bottom: 1px solid rgb(230, 230, 230);
     }
   }
 </style>
