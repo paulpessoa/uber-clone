@@ -31,6 +31,23 @@ app.get('/api/address/:address', async (req, res) => {
     }
 })
 
+app.get('/api/distance/:pickup/:destination', async (req, res) => {
+    try {
+
+            let data = await axios.get(
+                'distancematrix/json' + 
+                '?origins=' + req.params.pickup +
+                '&destinations=' + req.params.destination +
+                '&units=imperial' +
+                '&key=' + process.env.GOOGLE_MAPS_API_KEY
+            )
+
+            res.status(200).json(data.data)
+    } catch (err) {
+        console.log(err)
+    }
+})
+
 app.listen(port, () =>{
     console.log(`App listening at https://localhost:${port}`)
 })
