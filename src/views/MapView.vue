@@ -24,10 +24,10 @@
 
                 <div class="">
                     <div class="flex items-center px-4 py-5">
-                        <img src="img/uber/ride.png" alt="ride" width="75">
+                        <img src="img/uber/comfort.png" alt="ride" width="75">
                         <div class="w-full ml-3">
                             <div class="flex items-center justify-between">
-                                <div class="text-2xl mb-1">UberX</div>
+                                <div class="text-2xl mb-1">Comfort</div>
                                 <div class="text-xl">R$ 55,42</div>
                             </div>
                             <div class="text-gray-500">7 hours</div>
@@ -37,16 +37,21 @@
 
                 <div class="">
                     <div class="flex items-center px-4 py-5">
-                        <img src="img/uber/ride.png" alt="ride" width="75">
+                        <img src="img/uber/uberxl.png" alt="ride" width="75">
                         <div class="w-full ml-3">
                             <div class="flex items-center justify-between">
-                                <div class="text-2xl mb-1">UberX</div>
+                                <div class="text-2xl mb-1">Uber XL</div>
                                 <div class="text-xl">R$ 55,42</div>
                             </div>
                             <div class="text-gray-500">7 hours</div>
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="flex items-center justify-center bg-white py-6 px-4 w-full absolute bottom-0 shadow-inner">
+                <button class="bg-black text-2xl text-white py-4 px-4 rounded-sm w-full">
+                    Confirm UberX
+                </button>
             </div>
         </div>
     </div>
