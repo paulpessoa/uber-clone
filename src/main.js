@@ -8,7 +8,7 @@ import axios from 'axios'
 axios.defaults.baseURL = process.env.VUE_APP_API_URL
 
 import { createPinia } from 'pinia'
-import { piniaPluginPersistedState } from 'pinia-plugin-persistedstate'
+import piniaPluginPersistedState from 'pinia-plugin-persistedstate'
 
 const pinia = createPinia()
 pinia.use(piniaPluginPersistedState)
